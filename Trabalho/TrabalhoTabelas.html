@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Trabalho Tabelas</title>
+    </head>
+
+    <body>
+        Primeira tabela como pedido no enunciado da questão. <br>
+        Foi adicionado bordas para melhor visualização.
+        <table border="1px">
+            <tr>
+                <th> Horário</th>
+                <th> Segunda</th>
+                <th> Terça</th>
+                <th> Quarta</th>
+                <th> Quinta</th>
+                <th> Sexta</th>
+            </tr>
+            <tr>
+                <td> 07-08 </td>
+                <td colspan="2"> Algoritmo</td>
+                <td> POO </td>
+                <td colspan ="2"> WEB </td>
+            </tr>
+            <tr>
+                <td> 08-09 </td>
+                <td> Banco de dados</td>
+                <td colspan= "2">Mobile </td>
+                <td colspan= "2"> Jogos </td>
+            </tr>
+            <tr>
+                <td> 09-10</td>
+                <td> Algoritmo </td>
+                <td colspan="2">WEB</td>
+                <td> Mobile</td>
+                <td> Banco de Dados</td>
+            </tr>
+            <tr>
+                <td> 10-11</td>
+                <td>Algoritmo</td>
+                <td>WEB</td>
+                <td>Mobile</td>
+                <td>Banco de Dados</td>
+                <td>Livre</td>
+            </tr>
+        </table>
+
+        <br> Achei meio estranho o design dessa tabela, entao fiz outra utilizando o comando "rowspan"
+
+            <table border="1px">
+                <tr>
+                    <th> Horário</th>
+                    <th> Segunda</th>
+                    <th> Terça</th>
+                    <th> Quarta</th>
+                    <th> Quinta</th>
+                    <th> Sexta</th>
+                </tr>
+
+                <tr>
+                    <td> 07-08</td>
+                    <td rowspan="2"> WEB </td>
+                    <td> Banco de Dados</td>
+                    <td rowspan="2"> Mobile </td>
+                    <td rowspan="2"> WEB</td>
+                    <td rowspan="2"> Algoritmo</td>
+                </tr>
+                <tr>
+                    <td> 08-09</td>
+                    <td> Livre </td>
+                </tr>
+                <tr>
+                    <td> 09-10 </td>
+                    <td rowspan="2"> Banco de Dados</td>
+                    <td rowspan="2"> Algoritmo </td>
+                    <td rowspan="2"> WEB </td>
+                    <td rowspan="2"> Jogos </td>
+                    <td rowspan="2"> Livre </td>
+                </tr>
+                <tr>
+                    <td> 10-11</td>
+                </tr>
+                
+        </table>
+    </body>
+</html>
