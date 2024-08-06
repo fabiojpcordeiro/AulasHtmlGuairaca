@@ -1,79 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title> Aula 04- Tabelas </title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title> Aula Formulario</title>
+  </head>
 
-<body>
-  <!--Tabela simples-->
+  <body>
+    <form action="#" method="POST">
+      <label for="nome">nome:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <br><br>
+      
+      <label for="email">email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <br><br>
 
-  <table>
-    <tr>
-      <th> Nome </th>
-      <th> Idade </th>
-      <th> Esporte favorito </th>
-    </tr>
+      <label for="idade"> idade:</label>
+      <input type="number" id="idade" name="idade" required>
 
-    <tr>
-      <td> Fabio </td>
-      <td> 27 anos </td>
-      <td> Futebol </td>
-    </tr>
-    <tr>
-      <td> Maria </td>
-      <td> 18 anos</td>
-      <td> Basquete </td>
-    </tr>
+      <br><br>
 
-    <tr>
-      <td> Matheus </td>
-      <td> 26 anos </td>
-      <td> Surf </td>
-    </tr>
-    
-    <!--Tabela com Colspan-->
+      <label for="mensagem">mensagem:</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
 
-  </table>
-    
-  <table>
-    <tr>
-      <th> Produto</th>
-      <th> Preços</th>
-      <th> Quantidade</th>
-      <th> Total</th>
-    </tr>
+      <br><br>
 
-    <tr>
-      <td> Camiseta</td>
-      <td> R$ 39,90</td>
-      <td> 2</td>
-      <td> R$ 79,80</td>
-    </tr>
-    <tr>
-      <td> Calça Jeans</td>
-      <td> R$ 89,90</td>
-      <td> 1</td>
-      <td> R$ 89,90</td>
-    </tr>
-    <tr>
-      <td> Tênis</td>
-      <td> R$ 149,90</td>
-      <td> 1</td>
-      <td> R$ 149,90</td>
-    </tr>
-    
-<!--Colspan = serve para mesclar celulas das tabelas-->
-<!-- Sintaxe:   <td colspan="numero celulas a mesclar"> conteudo da celula -->
+      <input type="submit" value="Enviar">
 
-    <tr> 
-      <td colspan= "3">Total Geral</td>
-      <td>R$ 599,90 </td>
+      
+    </form>
+  </body>
 
-      </tr>
-
-  </table>
-
-</body>
-  
 </html>
