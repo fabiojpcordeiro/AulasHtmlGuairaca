@@ -1,15 +1,38 @@
 body {
-    background-color: #808080;
+    font-family: arial, san-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(128, 2, 30, 0.878);
+    color: #333;
+}
+
+.header{
+    background-color: rgb(71, 2, 71);
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+}
+.nav ul li{
+    margin: 10px;
+
+}
+.features{
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
 }
 
 
-.title{
-    font-size: 34px;
-    font-weight: bold;
-    color: green;
-}
+.footer{
+    color: black;
+    text-align: center;
 
-#text-primary{
-    color: orange;
 }
-
