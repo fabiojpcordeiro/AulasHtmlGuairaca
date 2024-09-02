@@ -1,25 +1,113 @@
 body{
-    background-color: black;
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
-
-.relative-container{
-    position: relative;
+header{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 300px;
-    background: aqua;
+    z-index: 1000;
+    border-radius: 35px;
+}
+main{
+    flex: 1;
+    padding: 80px 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+.movie-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+}
+.movie{
+    width: 300px;
+    flex-wrap: wrap;
+    background-color: #ede1e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.movie img{
+    width: 100%;
+    height: 400px;
+}
+.movie h2{
+    font-size: 20px;
+    margin: 10px;
+}
+.movie p {
+    font-size: 15px;
+    color: #666;
+    padding: 0 10px 20px;
+
+}
+footer{
+    background-color:#333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;     
+}
+footer p{
+    margin: 0;
+    font-size: 15px;
+}
+@media (max-width: 768px){
+    .movie-grid{
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie{
+        width: 80%;
+    }
 }
 
-.absolute-item{
-    position: absolute;
-    top: 50px;
-    left: 0px;
-    width: 200px;
-    padding: 20px;
-    background-color: red;
+@media (max-width: 480px){
+    .movie{
+        width: 80%;
+    }
 }
 
-.content{
-    padding: 16px;
-    background-color: blueviolet;
+button{
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin: auto;
+    cursor: pointer;
+    border-radius:20px;
+    font-size: 15px;
+}
+button:hover{
+    background-color:#555;
+}
+
+.movie:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
