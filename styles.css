@@ -1,0 +1,41 @@
+body{
+    margin:0;
+}
+.grid-container {
+    display: grid; /* Divide a pagina em linhas e colunas como uma tabela*/  
+    grid-template-rows: auto 1fr auto; /*cria 3 linhas, a primeira para o cabeçalho, a segunda será dividida entre a barra lateral e o conteúdo principal*/
+    grid-template-columns: 1fr 5fr; /*Cria 2 colunas, para podermos dividir a segunda linha em duas, desnecessario nas outras linhas*/
+    grid-template-areas: /*Nomeia as areas do grid com strings para ficar mais facil de associar depois*/
+    "header header"
+    "sidebar main"
+    "footer footer";
+    height: 100vh; /*Faz com que o grid ocupe todo o espaço da tela*/
+}
+.header{
+    grid-area: header; /*indica quais areas do grid farão parte do header*/
+    background-color: green;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: blue;
+    text-align: center;
+    font-size:30px;
+    padding: 10px;
+}
+.main{
+    grid-area: main;
+    background-color: red;
+    text-align: center;
+    font-size:30px;
+    padding: 10px;
+}
+.footer{
+    grid-area: footer;
+    background-color: grey;
+    text-align: center;
+    font-size:30px;
+    padding: 10px;
+}
