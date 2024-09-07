@@ -1,41 +1,120 @@
-body{
-    margin:0;
-}
-.grid-container {
-    display: grid; /* Divide a pagina em linhas e colunas como uma tabela*/  
-    grid-template-rows: auto 1fr auto; /*cria 3 linhas, a primeira para o cabeçalho, a segunda será dividida entre a barra lateral e o conteúdo principal*/
-    grid-template-columns: 1fr 5fr; /*Cria 2 colunas, para podermos dividir a segunda linha em duas, desnecessario nas outras linhas*/
-    grid-template-areas: /*Nomeia as areas do grid com strings para ficar mais facil de associar depois*/
-    "header header"
-    "sidebar main"
-    "footer footer";
-    height: 100vh; /*Faz com que o grid ocupe todo o espaço da tela*/
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #565353;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 .header{
-    grid-area: header; /*indica quais areas do grid farão parte do header*/
-    background-color: green;
-    text-align: center;
-    font-size: 30px;
-    padding: 10px;
+    background-image: url(assets/headerback.webp);
+    background-size: auto;
+    background-position: center;
+    font-size: 25px;
+    display: flex;
+    width: 100vw;
+    height: 15vh;
+    background-color: #0fe0e67a;
+    gap: 20%;
+    color: white;
 }
-.sidebar{
-    grid-area: sidebar;
-    background-color: blue;
+.header h1{
+    padding-left: 2%;
     text-align: center;
-    font-size:30px;
-    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.buttons{
+    display: flex;
+    flex: 1;
+    align-items: flex-end;  
+}
+.buttons button{
+    font-size: 100%;
+    width: 25%;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
 }
 .main{
-    grid-area: main;
-    background-color: red;
-    text-align: center;
-    font-size:30px;
+    display: flex;
+    flex-direction: row;
+}
+.sidebar{
+    width: 400px;
+    background-color: blue;
+    flex-direction: column;
     padding: 10px;
+    gap: 15px;
+    display: flex;
+}
+
+.catalog-container{
+    display: flex;
+    flex: 1;
+    background-color: black;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 15px;
+    align-content: flex-start; /*alinha multiplas linhas, combina com flex wrap*/
+}
+.card{
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    background-color: yellow;
+    border-radius: 15px;
+    height: 400px;
+    width: 300px;
+    flex-direction: column;
+    cursor: pointer;
+}
+.card img{
+    margin: 10px;
+    /*padding: 10px;*/
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 80%;
+}
+.card h2{
+    margin: 0;
+    width: 100%;
+    height: 10%;
+    font-size: 120%;
+}
+.card h3{
+    margin: 0;
+    width: 100%;
+    height: 10%;
+    font-size: 160%;
+
+
 }
 .footer{
-    grid-area: footer;
-    background-color: grey;
-    text-align: center;
-    font-size:30px;
-    padding: 10px;
+    background-color: aqua;
+    display: flex;
+    width: 100vw;
+    height: 7vh;
+}
+.trademark{
+    width: 1000px
+
+}
+.social-media-links{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.social-media-links img{
+    width: auto;
+    height: 90%;
+}
+.social-media-links button{
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
 }
